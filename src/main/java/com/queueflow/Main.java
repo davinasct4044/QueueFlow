@@ -4,13 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Fila fila = new Fila();
 
-        Senha senha1 = new Senha();
-        Senha senha2 = new Senha();
-        Senha senha3 = new Senha();
-
-        fila.colocarSenhaEmEspera(senha1);
-        fila.colocarSenhaEmEspera(senha2);
-        fila.colocarSenhaEmEspera(senha3);
+        fila.gerarSenha();
+        fila.gerarSenha();
+        fila.gerarSenha();
 
         System.out.println("Aguarde...");
 
@@ -18,12 +14,11 @@ public class Main {
         fila.chamarSenha();
 
         System.out.println(fila.espera);
-        System.out.println(fila.chamados);
+        System.out.println(fila.em_atendimento);
 
-        fila.resetarFila();
+        fila.finalizarAtendimento();
 
-
-        System.out.println(fila.chamados);
+        System.out.println(fila.em_atendimento);
         System.out.println(fila.espera);
 
     }
